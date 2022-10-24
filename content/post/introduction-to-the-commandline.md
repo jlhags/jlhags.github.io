@@ -2,7 +2,7 @@
 title: "Introduction to the Command Line"
 subtitle: "The basics"
 date: 2022-10-21T11:05:10-07:00
-draft: true
+draft: false
 description: Introduction to the commandline. Beginning tutorial
 categories: tutorials
 tags: [command line, terminal, shell]
@@ -49,13 +49,13 @@ user@host:path$ |
 How and how much you can configure it will depend on the shell you use. My current preferred shell is [fish shell](https://fishshell.com/). Leave a comment if you would be interested in an article on how to use and configure it.
 
 ## Navigation
-When using the command line there is a concept of a "current working directory," CWD for short. You can think of this as your current location. you have access to see the files and folders in this location. To reference files outside od this location, you will have to explicitly give the location of said files. For example if you wanted to look at a file in your `Downloads` folder, but were currently in your `Documents` folder, you would have to specify how to get to the `Downloads` folder from there. In order to learn how to navigate through our directories we need to understand the directory structure.
+When using the command line there is a concept of a "current working directory," CWD for short. You can think of this as your current location. you have access to see the files and folders in this location. To reference files outside of this location, you will have to explicitly give the location of said files. For example, if you wanted to look at a file in your `Downloads` folder, but were currently in your `Documents` folder, you would have to specify how to get to the `Downloads` folder from there. In order to learn how to navigate through our directories we need to understand the directory structure.
 
 ### Directory Structure
-As I am sure you are aware, directories can contain files and directories which in turn can contain more files and more directories. So where is the starting point? Well that depends on which Operating System you use e.g., Windows, OSX, Linux. But really the main difference will be if you use Windows or not, as Windows is the only one that really does it differently.
+As I am sure you are aware, directories can contain files and directories which in turn can contain more files and more directories. So, where is the starting point? Well that depends on which Operating System you use e.g., Windows, OSX, Linux. But really the main difference will be if you use Windows or not, as Windows is the only one that really does it differently.
 
 #### Windows
-Windows has a concept if a base level called `Drives`. They are usually assigned a letter. These drives can represent a part of a disk or solid state drive, CD or DVD drive, or even a remote/network drive. Often the main drive will be assigned as the `C` drive. When trying to reference something in the `C` drive it would start like `c:\`
+Windows has a concept of a base level called `Drives`. They are usually assigned a letter. These drives can represent a part of a disk or solid state drive, CD or DVD drive, or even a remote/network drive. Often the main drive will be assigned as the `C` drive. When trying to reference something in the `C` drive it would start like `c:\`
 
 #### The Other OSes
 On OSX (Mac) and linux, there is a concept called the `root` directory. For the most part, every file and directory can be found here. When reference something for the root directory it would start like `/`
@@ -112,11 +112,11 @@ cd /home/jhagofsk/Documents
 Think of environment variables as configuration values for the command line. I won't go into detail here, but there is one specific variable that we should cover.
 
 ### PATH
-The `PATH` variable gives the shell a list of directories to search for executables. For instance, if you didn't want to type the full path to the `ls` command every time, you could just make sure the path to it is included in `PATH` that's why in the previous examples we just typed `ls` rather than something like `/usr/bin/ls`. Modifying environment variables varies from shell to shell, but viewing as specific on is fairly universal. If we wanted to look the the current `PATH`:
+The `PATH` variable gives the shell a list of directories to search for executables. For instance, if you didn't want to type the full path to the `ls` command every time, you could just make sure the path to it is included in `PATH`. That's why in the previous examples we just typed `ls` rather than something like `/usr/bin/ls`. Modifying environment variables varies from shell to shell, but viewing as specific on is fairly universal. If we wanted to look the the current `PATH`:
 
 ![ls](/img/path.gif)
 
-We use the `echo` command followed by the name of the variable with a `$` prepended to it. (Try it without the `$`. What happens?) Here we see a list of paths separated by a colon. So if a path isn't specified the shell will check all these folders for the file being reference in the command. 
+We use the `echo` command followed by the name of the variable with a `$` prepended to it. (Try it without the `$`. What happens?) Here we see a list of paths separated by a colon. So if a path isn't specified, the shell will check all these folders for the file being reference in the command. 
 
 ## Conclusion
 We just scratched the surface of the command line. There are plenty of shortcuts and tricks that can make your command line experience more efficient and useful. Check back for more articles on just that. Again feel free to leave questions in the comments.
