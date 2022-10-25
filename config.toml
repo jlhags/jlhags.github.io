@@ -9,6 +9,7 @@ disqusShortname = "theoreticallyjosh"
 
 [taxonomies]
   tag = "tags"
+  category = "categories"
 
 [Params]
     subtitle = "Making programming approachable for everyone"
@@ -87,4 +88,8 @@ disqusShortname = "theoreticallyjosh"
 [[menu.main]]
     name = "Tags"
     url = "tags"
+    weight = 3
+[[menu.main]]
+    name = "Tutorials"
+    url = "categories/tutorials"
     weight = 3
