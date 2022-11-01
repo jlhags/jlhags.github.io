@@ -1,11 +1,13 @@
 ---
 title: "Beginning Programming Lesson 01"
 subtitle: "Introduction and the Tools"
-date: 2022-10-19T09:15:05-07:00
-draft: true
+date: 2022-10-28T09:15:05-07:00
+draft: false
 description: Beginning programming. The tools to get started.
 categories: tutorials
-tags: [go, golang, beginning programming, commandline, terminal, ide]
+tags: [go, golang, beginning programming, command line, terminal, ide]
+keywords: [go, golang, beginning programming, command line, terminal, ide]
+
 ---
 
 When I was about 12 years old, my aunt gave us an old computer. Without going into all the details, I broke it, and all that it would then let you do is write programs in BASIC. It came with a book explaining how to do various things with the language. So having nothing better to do, I worked through it and taught myself how to code, and eventually went to college to learn how to do it better. Now I make a living writing software. I have good news for you. For most people and what they want to do with software development, you don't need to spend tons of money. You can find pretty much everything you need on the Internet. With the tutorials that follow I hope to make it even easier for you. Basic understanding on how to use a computer, browse the Web, and some middle school math is required, but that's pretty much it. We won't go into exhaustive detail on every topic covered in this series, but it should be enough to get you going. So, let's get on with what you will need.
@@ -13,16 +15,16 @@ When I was about 12 years old, my aunt gave us an old computer. Without going in
 ## Programming Tools
 ### The Commandline
 While there have been great efforts to build tools that remove the need to access the command line while developing software, chances are you will need to use it at some point, including future lessons.
-What is it?
+#### What is it?
 Probably the most recognizable image of the command line is that black box on the screen with green text. Basically it is a place to interact with your computer via text rather than photos (mostly). You'll need an application called a "terminal" or "terminal emulator" to get started. Also, you will need to select a shell. Think of it as what interprets the text you type, and the terminal displays it. Each operating system has it's own default shell, but for the most part you have at least a few alternatives. There are plenty of articles written on the subject. So, we are just going to look at some high level concepts. In general a command entered into the terminal is broken into 3 parts.
 
-#### executable
-This is the name of the commandline application itself.
+##### executable
+This is the name of the command line application itself.
 
-#### flags
-Flags are options that you pass to the executable starting with one or two dash(es) to indicate how you would like it to perform. For example, when you pass "--help" to many commandline apps, rather than performing their normal tasks, they display help information on how to use them.
+##### flags
+Flags are options that you pass to the executable starting with one or two dash(es) to indicate how you would like it to perform. For example, when you pass "--help" to many command line apps, rather than performing their normal tasks, they display help information on how to use them.
 
-#### arguments
+##### arguments
 Arguments are similar to flags but are nameless and need to go in a particular order. If you wanted to open a webpage in Google Chrome it would look something like:
 
 `google-chrome https://google.com`
