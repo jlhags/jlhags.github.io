@@ -1,8 +1,8 @@
 ---
 title: "Beginning Programming Lesson 02"
 subtitle: "Variables, Functions, Importing, Pointers, and Scope."
-date: 2022-10-19T09:22:40-07:00
-draft: true
+date: 2022-11-01T09:22:40-07:00
+draft: false
 description: Beginning programming. Learn about variables, functions, importing, pointers, and scope.
 tags: [go, golang, beginning programming, variables, functions, pointers, scope]
 ---
@@ -89,11 +89,11 @@ func main() {
 }
 ```
 ## Comments
-I know this subject wasn't included in the title of this post, but I would be remiss to exclude it. If you want (and you should want to) make notes in your code you can do so by including "comments" comments are ignored by Go, so you can add any notes you like. To make a single line comment start it with two slashes `//` anything on that line after the slashes will be ignored.
+I know this subject wasn't included in the title of this post, but I would be remiss to exclude it. If you want (and you should want to) make notes in your code you can do so by including "comments". Comments are ignored by Go, so you can add any notes you like. To make a single line comment start it with two slashes `//` anything on that line after the slashes will be ignored.
 ## Variables
 Variables are letters/words/symbols that represent a value of some sort. Remember in algebra formulas like:
  $$ a = b+c $$
-a,b, and c are all "variables" that represent numbers. In programming, variables can represent a lot more that just numbers too. What thing a variable represents is referred to as a "type" Lets take a look at some of the main types in Golang. My most languages will have similar. Here are a few of the main types in Golang.
+a,b, and c are all "variables" that represent numbers. In programming, variables can represent a lot more that just numbers too. What thing a variable represents is referred to as a "type". Lets take a look at some of the main types in Golang. My most languages will have similar. Here are a few of the main types in Golang.
 ### Numbers
 There are different types of numbers in Golang. Which one you should choose will depend on your use case. Note that depending on how big a number you need, you may have to additional include a large or smaller bit width to the variable. For instance if you have a large enough int you will need to set the type to int64, or if it is small and you want to conserve memory use int8. Same goes for float.
 #### int, int8, int16, int32, int64
@@ -214,5 +214,5 @@ func doubleInt(n *int) {
 What do you think it does? Well, it takes a variable i which is of type `*int` and seems to return nothing. What is going on here? n is a pointer to a location in memory that stores an int. That means the function will have access to modify the value in that memory location. So, if n points to the value 12, after this function is called the value there will now be 2 times greater. Now you  may wonder what `(*n)` means in this function. This is referred to as de-referencing. So we are saying we want the value stored at the location n is pointing to rather than the pointer itself. Since `n ` has not changed where it is pointing to, it will now reference the value 24. When functions take arguments that are pointer they are referred to "pass by reference", while the others are "pass by value" Which method you choose will depend on the application.
 
 ## Conclusion
-Our first program contained the basics you need to get started programming in Golang. Look at the code again, and see if you still have questions about how it works. Play around with the code a bit. If you have any questions, leave a comment. In our next lesson we will learn about other more complicated data types called [structs](/post/beginning-programming-lesson-03).
+Our first program contained the basics you need to get started programming in Golang. Look at the code again, and see if you still have questions about how it works. Play around with the code a bit. If you have any questions, leave a comment. In our next lesson we will learn about other more complicated data types called structs.
 
