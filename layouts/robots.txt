@@ -1,4 +1,7 @@
 User-agent: *
 
-{{range .Data.Pages}}
-Disallow: {{.RelPermalink}}{{end}}
+User-agent: *
+Allow: /
+
+Sitemap: http://theoreticallyjosh.com/sitemap.xml
+

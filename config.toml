@@ -6,7 +6,7 @@ theme = "beautifulhugo"
 pygmentsCodeFences = true
 pygmentsUseClasses = true
 disqusShortname = "theoreticallyjosh"
-
+enableRobotsTXT = true
 [taxonomies]
   tag = "tags"
   category = "categories"
