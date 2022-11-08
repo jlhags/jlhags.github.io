@@ -6,6 +6,7 @@ draft: false
 description: Beginning programming. Learn about variables, functions, importing, pointers, and scope.
 categories: tutorials
 tags: [go, golang, beginning programming, variables, functions, pointers, scope]
+keywords: [go, golang, beginning programming, variables, functions, pointers, scope]
 ---
 
 Now that you have your setup ready to go, we can start writing some code!  Note that we are just touching the surface of the topics covered in this lesson, but the sooner you start writing code, the easier it will become to understand the topics better. Plus you are more likely to continue, if you feel like you are accomplishing something, rather than learning more and more theory. 

@@ -5,6 +5,7 @@ date: 2022-11-08T10:03:18-07:00
 draft: false
 categories: tutorials
 tags: [go, golang, beginning programming, complex data types, structs]
+keywords: [go, golang, beginning programming, complex data types, structs]
 ---
 
 In the last installment of this series we learned about variables, and covered some simple variable types. Now we are going to learn about complex data types. In short, they store more than a single data point of information. For example, what if we wanted to have a variable that stored information about a rectangle? There is more than one bit of information to describe it. At minimum you would probably want to store its width and length.  Depending on the language you use, there are different terms for the data types that can hold such information. The main two are classes and structs (short for structures). Some languages use both, but in the case of Golang it uses structs. You can download the example code [here](https://raw.githubusercontent.com/jlhags/Beginning_Programming_In_Go/main/Lesson_03/main.go), or see below:
