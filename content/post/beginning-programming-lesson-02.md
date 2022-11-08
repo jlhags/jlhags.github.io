@@ -4,6 +4,7 @@ subtitle: "Variables, Functions, Importing, Pointers, and Scope."
 date: 2022-11-01T09:22:40-07:00
 draft: false
 description: Beginning programming. Learn about variables, functions, importing, pointers, and scope.
+categories: tutorials
 tags: [go, golang, beginning programming, variables, functions, pointers, scope]
 ---
 

@@ -3,6 +3,7 @@ title: "Beginning Programming Lesson 03"
 subtitle: "Complex Data Types (Structs/Classes)"
 date: 2022-11-08T10:03:18-07:00
 draft: false
+categories: tutorials
 tags: [go, golang, beginning programming, complex data types, structs]
 ---
 
