@@ -1,8 +1,8 @@
 ---
 title: "Beginning Programming Lesson 03"
 subtitle: "Complex Data Types (Structs/Classes)"
-date: 2022-10-19T10:03:18-07:00
-draft: true
+date: 2022-11-08T10:03:18-07:00
+draft: false
 tags: [go, golang, beginning programming, complex data types, structs]
 ---
 
@@ -42,7 +42,7 @@ func main() {
 ```
 
 ## Defining a Struct
-When creating a variable, as you recall, we have to specify the type. If we want to use a new type, we must define it. Note the following definition of a new type called rectangle:
+When creating a variable, as you recall, we have to specify the type. If we want to use a new type, we must define it. Note the following definition of a new type called `rectangle`:
 ```go
 type rectangle struct {
 	Width  int
@@ -52,14 +52,14 @@ type rectangle struct {
 Here we say the new type is a struct with Width and Length as components, called fields, of it. Both will be `int` values. 
 
 ## Declaring and Using Structs
-Now that the rectangle type is defined, we can utilize it as noted in first line of function main:
+Now that the `rectangle` type is defined, we can utilize it as noted in first line of function main:
 ```go
 rect := rectangle{Length: 4, Width: 5}
 ```
-`rect` will be a rectangle with a Length of 4 and a Width or 5. If we wanted to specifically look at an individual component/field like Width, you could do so by using `rect.Width`. What if we wanted to know / keep track of the rectangle's area. We could add a field to the struct to store it, but that would require the user of the struct to calculate it and keep it up to date. We can create special functions that are specific to a struct called methods
+`rect` will be a rectangle with a Length of 4 and a Width of 5. If we wanted to specifically look at an individual component/field like `Width`, you could do so by using `rect.Width`. What if we wanted to know / keep track of the rectangle's area. We could add a field to the struct to store it, but that would require the user of the struct to calculate it and keep it up to date. We can create special functions that are specific to a struct called methods.
 
 ## Methods
-Methods are functions that are used on structs and have access to the calling variables fields. Going back to the rectangle and its area, we could create a method called Area that calculates the area and returns it back:
+Methods are functions that are used on structs and have access to the calling variables fields and other methods. Going back to the rectangle and its area, we could create a method called `Area` that calculates the area and returns it back:
 ```go
 func (r rectangle) Area() int {
 	return r.Length * r.Width
@@ -67,7 +67,7 @@ func (r rectangle) Area() int {
 ```
 The main difference you will see in this definition from a normal function is after the func keyword, we see `(r rectangle)` meaning only rectangles have access to this function/method. To call it we would use the same kind of dot notation we used to access its fields, `rect.Area()`. When inside the method we can access the calling structs fields by using `r`, as defined in the beginning of the function definition. 
 
-Remember when learning about functions we can either pass by reference or by value. The same is not only true for the argument to the function, but also the struct itself. In this case since it is passed by value (note the lack of an *), if we were to modify r in the function it wouldn't actually modify `r` in the main function since it only has access to the value of `r`. In other words it made a copy of `r` from main. But what if we wanted to be able to actually manipulate `r`? If we wanted to have a function that resized/scaled the rectangle up we could do:
+Remember when learning about functions we can either pass by reference or by value. The same is not only true for the arguments of the function, but also the struct itself. In this case since it is passed by value (note the lack of an *), if we were to modify r in the function it wouldn't actually modify `r` in the main function since it only has access to the value of `r`. In other words, it made a copy of `r` from main. But what if we wanted to be able to actually manipulate `r`? If we wanted to have a function that resized/scaled the rectangle up we could do:
 ```go
 func (r *rectangle) Scale2X() {
 	r.Length = r.Length * 2
