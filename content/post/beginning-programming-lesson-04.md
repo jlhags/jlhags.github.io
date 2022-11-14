@@ -1,9 +1,12 @@
 ---
 title: "Beginning Programming Lesson 04"
 subtitle: "Control Structures and Array-Like Things"
-date: 2022-10-19T11:13:23-07:00
-draft: true
+date: 2022-11-14T11:13:23-07:00
+draft: false
+description: Beginning programming. Learn about control structures and array like things.
 tags: [go, golang, beginning programming, control structures, arrays, slices, for loop, switch statement, if else ]
+keywords: [programming, array, index, zero]
+
 ---
 
 We now know how to create and use variables, structs, and functions. But thus far, all the examples have been fairly linear. What if we want do things only when certain criteria are met? Or what if we want to do the same thing many times in a row? What if we want want store a bunch of a rectangles from the previous lesson? This is where control structures, arrays and slices come in handy. You can download this lessons code [here](https://raw.githubusercontent.com/jlhags/Beginning_Programming_In_Go/main/Lesson_02/main.go).
@@ -102,7 +105,7 @@ func (p polygon) Type() string {
 ```
 
 ## Arrays and Slices
-You can think of arrays and slices as variables that are a list of values. If you wanted to store a grocery list, you may want to use an array or slice of type string. But what are the differences between the two?
+You can think of arrays and slices as variables that are a list of values. If you wanted to store a grocery list, you may want to use an array or slice of type `string`. But what are the differences between the two?
 
 Arrays in Golang are of a predetermined length. If we use less space than what was requested, the extra space is wasted. If we need more space, we need to create a new variable. Slices on the other hand, can grow or shrink depending on how much space you need. Which one you use will depend on the use case.
 
@@ -120,7 +123,8 @@ You can define a slice as follows:
 var s [] int
 ```
 Here we created a slice of integers. Since nothing has been assigned to it, it currently holds no values.
-Accessing Elements of an Array or Slice
+
+### Accessing Elements of an Array or Slice
 If you wanted to access a specific element of an array or slice:
 
 ```go
@@ -128,7 +132,7 @@ s2 := []int{4, 5, 6}
 fmt.Println(s2[2])
 ```
 
-In this case the value in position 2 of s2 would be printed. Note that I didn't say the 2nd element. Most programming languages start counting at 0 (Article on why to come later). So, 6 would be printed, not 5.
+In this case the value in position 2 of s2 would be printed. Note that I didn't say the 2nd element. Most programming languages start counting at 0 ([Why Do Arrays Start at Zero?](/posts/why-do-arrays-start-at-zero)). So, 6 would be printed, not 5.
 
 ### Getting the Length of a Slice
 Since slices can change in length, it will be useful to know just how long it is. For this, we can use the function len:
@@ -138,7 +142,7 @@ fmt.Printf("s1 Length: %d\n", len(s1))
 Here were are printing out the length of s1. The len function can be used for more that just slices too. For example you can use it to get the number of characters in a string. For more info see here.
 
 ### Boolean Logic
-We need to spend a moment to talk about Boolean Logic, as most of the control structures to follow will use them to some degree. Think of it as a logic formula that results in either true or false. You use them everyday without realizing it. For instance if you were trying to determine if you needed an umbrella or not you would consider, "Is it raining and will I be going out side?" If both parts of that sentence are true, then the whole statement is true and you should have an umbrella. You can read more about it [here](https://en.wikipedia.org/wiki/Boolean_algebra). If that is too confusion, let me know in the comments and I will write an article in it.
+We need to spend a moment to talk about Boolean Logic, as most of the control structures to follow will use them to some degree. Think of it as a logic formula that results in either true or false. You use them everyday without realizing it. For instance if you were trying to determine if you needed an umbrella or not you would consider, "Is it raining and will I be going out side?" If both parts of that sentence are true, then the whole statement is true and you should bring an umbrella. You can read more about it [here](https://en.wikipedia.org/wiki/Boolean_algebra). If that is too confusion, let me know in the comments and I will write an article about it.
 
 In terms of Golang we need to know at least few comparative and logical operators.
 
@@ -166,7 +170,7 @@ These are symbols to represent the boolean logic operators "AND", "OR", and "NOT
 Control structures define how the code flows. Since we just talked about arrays, lets looks at some control structures that allow for "looping" through the elements of an array
 ### for Loops
 Many languages have for loops or at least something like them. Most for loops follow the same structure:
-for(<initialization of a variable>;<condition in which loop should continue>;<action to perform at end of iteration>). For example:
+for(&lt;initialization of a variable&gt;;&lt;condition in which loop should continue&gt;;&lt;action to perform at end of iteration&gt;). For example:
 
 ```go
 s:=[]int{1,2,3,4,5,6}
@@ -175,7 +179,7 @@ for i := 0; i < len(s); i++ {
 
 }
 ```
-The initialization part is creating a variable `i` and giving it a value of 0. As long as `i` is less than the length of the slice s we should continue looping. At the end of each iteration we add 1 to i (`i++` is shorthand for `i = i+1`). In Golang it is not required that all components of the for loop need to be there. In fact, none of them need to be there:
+The initialization part is creating a variable `i` and giving it a value of 0. As long as `i` is less than the length of the slice `s`, we should continue looping. At the end of each iteration we add 1 to `i` (`i++` is shorthand for `i = i+1`). In Golang it is not required that all components of the for loop need to be there. In fact, none of them need to be there:
 
 ```go
 for ; ; {
@@ -183,7 +187,7 @@ for ; ; {
 }	
 ```
 
-The example above would cause an "infinite loop" meaning once the program got here, it would be stuck here forever, until program is forced to close. Why would we want to do this? Well we probably wouldn't at least not as is. Maybe the condition for determining when to stop is not easily captured in the for loop conditional. Another way to end a for loop is by using the `break` command.
+The example above would cause an "infinite loop" meaning once the program get here, it will be stuck here forever, until program is forced to close. Why would we want to do this? Well we probably wouldn't at least not as is. Maybe the condition for determining when to stop is not easily captured in the for loop conditional. Another way to end a for loop is by using the `break` command.
 ```go
 for ; ; {
    fmt.Println("This only gets printed once")
@@ -199,7 +203,7 @@ for i, v := range s {
 	fmt.Printf("%d:%d\n",i,v)
 }
 ```
-This would effectively do the same thing as our first for loop example. range returns 2 values, the index, and the value at that index. If for some reason you didn't need the index, you can assign it to `_`, meaning ignore it:
+This would effectively do the same thing as our first for loop example. `range` returns 2 values, the index, and the value at that index. If for some reason you didn't need the index, you can assign it to `_`, meaning ignore it:
 ```go
 s:=[]int{1,2,3,4,5,6}
 for _, v := range s {
@@ -216,7 +220,7 @@ if v > ret {
 }
 ```
 
-In this case ret will get set to `v` only if the current value of `ret` is less than `v`. That great but what if we wanted to do something different if it is not true
+In this case ret will get set to `v` only if the current value of `ret` is less than `v`. That great but what if we wanted to do something different, if it is not true?
 
 ```go
 if v > ret {
