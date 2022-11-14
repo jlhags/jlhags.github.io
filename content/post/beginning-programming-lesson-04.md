@@ -4,6 +4,7 @@ subtitle: "Control Structures and Array-Like Things"
 date: 2022-11-14T11:13:23-07:00
 draft: false
 description: Beginning programming. Learn about control structures and array like things.
+categories: tutorials
 tags: [go, golang, beginning programming, control structures, arrays, slices, for loop, switch statement, if else ]
 keywords: [programming, array, index, zero]
 
