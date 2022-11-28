@@ -2,8 +2,10 @@
 title: "Beginning Programming Lession 05"
 subTitle: "Inheritance, Interfaces, and Type Assertion"
 date: 2022-11-28T07:03:58-07:00
-draft: true
+draft: false
+categories: tutorials
 tags: [go, golang, beginning programming, interfaces, inheritance, type assertion]
+keywords: [programming, inheritance, interfaces, type assertion]
 ---
 
 We created complex data types (structs/classes), but what if we wanted to create another `struct` that expands upon another? Or you wanted to create a number of different structs that play by a certain set of rules. The example code for today can be found [here](https://raw.githubusercontent.com/jlhags/Beginning_Programming_In_Go/main/Lesson_06/main.go).
