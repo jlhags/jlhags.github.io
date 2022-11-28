@@ -282,4 +282,4 @@ func (p polygon) Type() string {
 ## Conclusion
 Now we have enough tools at our disposal to create mildly useful programs. Take a look at the example code for today. How might you improve it? What is `IsRegular()` doing? If you had a method to calculate the perimeter, could you utilize it in in `IsRegular()`? Could you rewrite the Type() method without using switch and only one if-else clause? 
 
-In our next lesson we will cover Interfaces, Inheritance, and Type Assertion.
+In our next lesson we will cover [Interfaces, Inheritance, and Type Assertion](/post/beginning-programming-lesson-05).
