@@ -1,7 +1,7 @@
 ---
 title: "Beginning Programming Lesson 06"
 subTitle: "Recursion and Error Handling"
-date: 2022-12-07T11:22:36-07:00
+date: 2022-12-07T11:20:36-07:00
 draft: false
 categories: tutorials
 tags: [go, golang, beginning programming, recursion, errro handling]
