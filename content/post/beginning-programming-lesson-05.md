@@ -243,5 +243,4 @@ cr.Color = "red"
 Here we set the `Height` and `Width` that were inherited from `Rectangle`. We also set its `Color`.
 
 ## Conclusion
-We learned how we can expand the usefulness and reusability of structs, along with how to start working with variables of "un-pre-determined" types. Look through the example code again. Does it seem more clear now? Can you think of a better way to implement the various `Polygon` structs? In the next lesson we will look at Recursion and Error Handling.
-
+We learned how we can expand the usefulness and reusability of structs, along with how to start working with variables of "un-pre-determined" types. Look through the example code again. Does it seem more clear now? Can you think of a better way to implement the various `Polygon` structs? In the next lesson we will look at [Recursion and Error Handling](/post/beginning-programming-lesson-05).
