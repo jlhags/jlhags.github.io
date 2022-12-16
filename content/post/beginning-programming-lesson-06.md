@@ -7,7 +7,7 @@ categories: tutorials
 tags: [go, golang, beginning programming, recursion, error handling]
 keywords: [programming, recursion, error handling]
 ---
-When I was in college my professor explained recursion as "Pretend you already have a function that does what you need to do." The problem with that explanation is, it only makes sense after you understand recursion. I think we can do better here. While we are at it, let's look at error handling too. You can find the code for today's lesson [here](https://raw.githubusercontent.com/jlhags/Beginning_Programming_In_Go/main/Lesson_06/main.go).
+ When I was in college my professor explained recursion as "Pretend you already have a function that does what you need to do." The problem with that explanation is, it only makes sense after you understand recursion. I think we can do better here. While we are at it, let's look at error handling too. You can find the code for today's lesson [here](https://raw.githubusercontent.com/jlhags/Beginning_Programming_In_Go/main/Lesson_06/main.go).
 
 ```go
 package main
