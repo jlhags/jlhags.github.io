@@ -1,13 +1,13 @@
 ---
 title: "Beginning Programming Lesson 07"
 subTitle: "Packages and Modules"
-date: 2022-12-09T11:20:36-07:00
-draft: true
+date: 2023-01-16T11:20:36-07:00
+draft: false
 categories: tutorials
-tags: [go, golang, beginning programming, recursion, error handling]
-keywords: [programming, recursion, error handling]
+tags: [go, golang, beginning programming, packages, modules]
+keywords: [programming, beginning programming,packages, modules]
 ---
-In previous lesson we put all of out code in one file and one package, `main`. However aside from very small projects this won't scale very well and does make your code very reusable apart from copying and pasting. We have already seen the usefulness of packages through using the `fmt` and `errors` packages. So let's look at how to create our own. You can find the code for today's lesson [here](https://github.com/jlhags/Beginning_Programming_In_Go/tree/main/Lesson_07). There is more than one file this time!
+In previous lesson we put all of out code in one file and one package, `main`. However, aside from very small projects, this won't scale very well, and does make your code very reusable apart from copying and pasting. We have already seen the usefulness of packages through using the `fmt` and `errors` packages. So let's look at how to create our own. You can find the code for today's lesson [here](https://github.com/jlhags/Beginning_Programming_In_Go/tree/main/Lesson_07). There is more than one file this time!
 
 main.go:
 ```go
@@ -109,13 +109,13 @@ go 1.16
 
 Take a look at `main.go`. In the imports section you will notice `"github.com/jlhags/Beginning_Programming_In_Go/Lesson_07/polygons"` This is saying we will be using a package called "polygons", but also where it can be found, "github.com/jlhags/Beginning_Programming_In_Go/Lesson_07". There is not requirement that it has to be on github, it could be gitlab, or any other git hosting server. In fact in this case since the polygons package is really just a sub-package "Lesson 7" we don't even need to have it remotely available. If we wanted to make the `polygons` package usable by other projects, we would probably set it up differently. In this use case we are really just creating different package as as way of organizing our code. 
 
-What if we wanted to make the `polygons` package available for other projects to use? Well a simple way would be to initialize it as as stand alone module. In the `polygons` folder we can run:
+What if we wanted to make the `polygons` package available for other projects to use? Well, a simple way would be to initialize it as as stand alone module. In the `polygons` folder we can run:
 
 ```bash
 go mod init github.com/jlhags/Beginning_Programming_In_Go/Lesson_07/polygons
 ```
 
-This will create a go.mod file very similar the one we have for our Lesson_07 project.
+This will create a go.mod file very similar the one we have for our Lesson_07 project. Note that the above way of dealing with modules is a newer concept in Go. More in depth documentation of it can be found at https://go.dev/blog/using-go-modules
 
 
 
