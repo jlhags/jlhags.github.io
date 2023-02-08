@@ -124,4 +124,4 @@ Many programming languages have a concept of public v.s. private. Public means e
 
 
 ## Conclusion
-Packages are a great way to keep our code organized and reusable. We covered the very basics of how they are handled in Golang. We've now reviewed enough of the basics to write some useful code! In the next lesson we will be looking at a practical example.
+Packages are a great way to keep our code organized and reusable. We covered the very basics of how they are handled in Golang. We've now reviewed enough of the basics to write some useful code! In the next lesson we will be looking at a [practical example](/post/beginning-programming-lesson-08).
